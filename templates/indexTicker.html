@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<body>
+    <h1>Amazing Analysis Platform</h1>
+    <hr>
+    <form action="tickerPlotFunc", method="GET">
+        {% csrf_token %}
+        <!--Enter your ticker <input type="text" name="ticker"><br>
+        <input type="submit">-->
+        <label for="fname">Enter company ticker: </label>
+        <input type="text" name="ticker">
+        <br>
+        <button type="submit">Analyze !</button>
+    </form>
+
+</body>
+{% endblock %}

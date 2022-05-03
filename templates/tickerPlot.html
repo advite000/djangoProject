@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<body>
+    <h1>you entered, {{ticker}}</h1>
+    <img src="{% static 'myApp/images/test.png' %}">  
+    <button type="submit" formaction="goHomeFunc">Home</button>
+    <form action="goHomeFunc" method="get">
+        <label for="fname">go home:</label>
+        <button type="submit">Home</button>
+    </form>    
+</body>
+
+{% endblock%}
